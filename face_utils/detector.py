@@ -65,6 +65,7 @@ def _getface_retina(img,mode):
         out = [top,right,bottom,left]
     return out
 
+
 def extract_face_boudries(img,model,mode):
     if model in ['hog','cnn']:
         out =_getface_hog_cnn(img,model,mode)
