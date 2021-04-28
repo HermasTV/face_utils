@@ -49,10 +49,10 @@ face = cropping.crop(img,bbox,1,80,80)
 
 
 input :  
-<img src="tests/files/Obama.jpg">
+<img src="tests/files/Obama.jpg" width="300" height="200" >
 
 output :  
-<img src="tests/files/obama_out.png">
+<img src="tests/files/obama_out.jpg" width="80" height="80">
 
 
 ## TODO::  
