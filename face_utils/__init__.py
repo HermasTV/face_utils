@@ -1,5 +1,3 @@
-"""Let's find some podcasts!"""
-
-__version__ = "0.1.0"
-import cropping
-import face_utils
+__version__ = "0.0.1"
+from face_utils import detection
+from face_utils import cropping

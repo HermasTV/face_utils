@@ -1,0 +1,4 @@
+include LICENSE
+
+recursive-include face_utils *
+recursive-include tests *

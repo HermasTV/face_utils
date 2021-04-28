@@ -3,8 +3,7 @@ import numpy as np
 import math
 import os
 import logging
-from cropping import crop
-from settings import MODELS_CONFIG
+from .settings import MODELS_CONFIG
 
 class Detector ():
     def __init__(self,model_name):
@@ -27,7 +26,7 @@ class Detector ():
         """ Cascade detector model
 
         Returns:
-            [class]: detector class
+            [class]: detector class object
         """
         cascadePath = os.path.join(os.path.dirname(__file__),
                                    'assets/haarcascade_frontalface_default.xml')
@@ -39,7 +38,7 @@ class Detector ():
         """ retina detector model
 
         Returns:
-            [class]: detector class
+            [class]: detector class object
         """
         #loading model paths
         caffemodel =os.path.join(os.path.dirname(__file__),
@@ -117,7 +116,6 @@ class Detector ():
         blob = cv2.dnn.blobFromImage(img, 1, mean=(104, 117, 123))
         self.model.setInput(blob, 'data')
         out = self.model.forward('detection_out').squeeze()
-        print(out)
         max_conf_index = np.argmax(out[:, 2])
         if max_conf_index ==0.0:
             pass
@@ -171,13 +169,3 @@ class Detector ():
         right = x + w
         bottom = y + h
         return top,right,bottom,left
-
-
-if __name__ =="__main__":
-    import cv2
-    imgPath = "/home/hermas/Pictures/id_mogady.jpg" 
-    #imgPath = "/home/hermas/Pictures/Screenshot from 2020-11-30 14-43-21.png" 
-    img = cv2.imread(imgPath)
-    print(img.shape)
-    model = Detector("retina")
-    print(model.detect(img,2))

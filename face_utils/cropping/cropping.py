@@ -39,7 +39,6 @@ def _get_new_box(src_w, src_h, bbox, scale):
 
 def crop(org_img, bbox, scale, out_w, out_h, crop=True):
     
-
     if not crop:
         dst_img = cv2.resize(org_img, (out_w, out_h))
         #cv2.imwrite(xx+'notcropped.jpg',dst_img)
