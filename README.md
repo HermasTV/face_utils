@@ -68,7 +68,7 @@ output :
 ## Release History
 
 * 0.0.1
-    * minimal workable features
+    * three detection models with one simple cropping module
 
 ## License 
 
