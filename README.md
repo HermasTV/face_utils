@@ -62,6 +62,7 @@ output :
 - [ ] add x1,y1,x2,y2 for detection module
 - [ ] add encoding feature
 - [ ] add shape drawing around faces 
+- [ ] add test scripts
 
 
 ## Release History
