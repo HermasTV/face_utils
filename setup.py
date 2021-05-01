@@ -6,10 +6,11 @@ with open("README.md", mode="r", encoding="utf-8") as readme_file:
 
 setup(
     name="face-utils",
-    version="0.0.1",
+    version="0.0.2",
     include_package_data=True,
     author="Hermas",
     author_email="hermas@digified.io",
+    url="https://github.com/HermasTV/face_utils",
     description="opensource wrapper library for face detection algorithms and other utilities",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -22,9 +23,9 @@ setup(
     ],
     classifiers=[
         "Intended Audience :: Science/Research",
-        "License :: MIT",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.7",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence :: Face Recognition "
+        "Topic :: Scientific/Engineering :: Artificial Intelligence "
     ],
     keywords="face_utils face-utils hermas digified python face utils datection"
 )
