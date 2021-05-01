@@ -62,12 +62,13 @@ output :
 - [ ] add x1,y1,x2,y2 for detection module
 - [ ] add encoding feature
 - [ ] add shape drawing around faces 
+- [ ] add test scripts
 
 
 ## Release History
 
 * 0.0.1
-    * minimal workable features
+    * three detection models with one simple cropping module
 
 ## License 
 
