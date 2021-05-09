@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""detectors.py: contains face detectors modules."""
+
+__author__ = "Ahmed Hermas"
+__copyright__ = "Copyright 2021, © Digified "
+__license__ = "MIT"
+__version__ = "0.1.0"
+__email__ = "a7medhermas@gmail.com"
+
 from cv2 import cv2
 import numpy as np
 import math
@@ -107,12 +117,12 @@ class Detector ():
         """
         height, width = img.shape[0], img.shape[1]
         aspect_ratio = width / height
-        #0
+        ####
         if img.shape[1] * img.shape[0] >= 192 * 192:
             img = cv2.resize(img,
                                 (int(192 * math.sqrt(aspect_ratio)),
                                 int(192 / math.sqrt(aspect_ratio))), interpolation=cv2.INTER_LINEAR)
-        #
+        ####
         blob = cv2.dnn.blobFromImage(img, 1, mean=(104, 117, 123))
         self.model.setInput(blob, 'data')
         out = self.model.forward('detection_out').squeeze()
