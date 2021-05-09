@@ -43,7 +43,7 @@ imgPath = "files/Obama.jpg"
 img = cv2.imread(imgPath)
 img= np.array(img)
 model = Detector("hog")
-bbox = (model.detect(img,2)) #using (x,y,w,h) return mode
+bbox = model.detect(img,2) #using (x,y,w,h) return mode
 face = cropping.crop(img,bbox,1,80,80)
 ```
 
@@ -57,17 +57,17 @@ output :
 
 ## TODO::  
 
-- [ ] add images loading function (opencv and PIL)
-- [ ] add multiple faces detection for retina face model
-- [ ] add x1,y1,x2,y2 for detection module
-- [ ] add encoding feature
-- [ ] add shape drawing around faces 
-- [ ] add test scripts
+- * add images loading function (opencv and PIL)
+- * add multiple faces detection for retina face model
+- * add x1,y1,x2,y2 for detection module
+- * add encoding feature
+- * add shape drawing around faces 
+- * add test scripts
 
 
 ## Release History
 
-* 0.0.1
+* 0.1.0
     * three detection models with one simple cropping module
 
 ## License 
