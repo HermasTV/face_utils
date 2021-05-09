@@ -6,10 +6,10 @@ with open("README.md", mode="r", encoding="utf-8") as readme_file:
 
 setup(
     name="face-utils",
-    version="0.0.2",
+    version="0.1.0",
     include_package_data=True,
     author="Hermas",
-    author_email="hermas@digified.io",
+    author_email="a7medhermas@gmail.com",
     url="https://github.com/HermasTV/face_utils",
     description="opensource wrapper library for face detection algorithms and other utilities",
     long_description=readme,
